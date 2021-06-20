@@ -2,7 +2,7 @@ const form = document.querySelector("form")
 const tableBody = document.querySelector("#tableBody")
 const submit = document.querySelector("#submit-button")
 let removeButtons = tableBody.querySelectorAll(".remove")
-//let readButtons = tableBody.querySelectorAll(".status")
+let readButtons = tableBody.querySelectorAll(".status")
 let myLibrary = []
 
 function Book(title,pages,author,status){
@@ -75,9 +75,9 @@ function displayTable(){
         tableBody.innerHTML += content
     })
     removeButtons = tableBody.querySelectorAll(".remove")
-    //readButtons = tableBody.querySelectorAll(".status")
+    readButtons = tableBody.querySelectorAll(".status")
     activateRemoval()
-    //toggleRead()
+    toggleRead()
 }
 
 submit.addEventListener("click",()=>{
