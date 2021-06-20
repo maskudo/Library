@@ -8,39 +8,45 @@
     <h1 id="h1">My Library</h1>
     <br>
     <div>
-        <form action="" class="form">
+        <form action="#" class="form">
             <div class="form-inputs">
                 <div class="form-item">
-                    <label for="Book Title">Title</label>
-                    <input type="text" id="textbox">
+                    <label for="Title">Title</label>
+                    <input type="text" id="textbox" name="Title">
                 </div>
                 <div class="form-item">
                     <label for="Pages">Pages</label>
-                    <input type="text" id="textbox">
+                    <input type="number" id="textbox" name="Pages">
                 </div>
                 <div class="form-item">
                     <label for="Author">Author</label>
-                    <input type="text" id="textbox">
+                    <input type="text" id="textbox" name="Author">
                 </div>
                 <div class="form-item">
                     <label for="Status">Status</label>
-                    <input type="checkbox">
+                    <span>Read? <input type="checkbox" name="Status"></span>
                 </div>
             </div>
             <br>
-            <input type="button" id="submit-button" value="Submit">
+            <input type="submit" id="submit-button" value="Submit">
         </form>
         <br>
         <br>
         <div>
             <table>
-                <tr>
-                    <th>Title</th>
-                    <th>Pages</th>
-                    <th>Author</th>
-                    <th>Status</th>
-                    <th>Remove</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Pages</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+                
             </table>
         </div>
     </div>
