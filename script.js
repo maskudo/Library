@@ -108,8 +108,8 @@ function displayTable(){
 
 submit.addEventListener("click",()=>{
     processForm()
-    form.reset()
     displayTable()
+    form.reset()
 })
 //initial table display
 displayTable()
