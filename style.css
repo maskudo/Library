@@ -2,9 +2,12 @@ body{
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 5%;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #h1{
     font-size: 50px;
+    font-weight: 300;
+    color: #2a3132;
 }
 .form-inputs{
     display: flex;
@@ -14,19 +17,74 @@ body{
     display: flex;
     flex-direction: column;
 }
+.textbox{
+    height: 25px;
+    width: 250px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+}
+#checkbox{
+    height: 20px;
+    width: 40px;
+    margin-left: 0px;
+}
+#submit-button{
+    height: 35px;
+    width: 90px;
+    font-size: 18px;
+    border:1px solid #612697;
+    border-radius: 2px;
+    background-color: #8366b4;
+    color: white;
+}
+#submit-button:hover{
+    background-color: #612697;
+}
+button{
+    height: 35px;
+    width: 80px;
+    font-size: 18px;
+    border: 1px solid #0165b9;
+    border-radius: 2px;
+    background-color: #5188ca;
+    color: white;
+}
+button:hover{
+    background-color: #0165b9;
+}
+.remove{
+    border-color: #ff010b;
+    background-color: #ff7168;
+    color: white;
+}
+.remove:hover{
+    background-color: #ff010b;
+}
 label{
     font-size: 18px;
     padding-bottom: 5px;
 }
 table{
-    width: 80%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
 }
 th{
     height: 40px;
-}
-.tableHead{
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    font-weight: 500;
+    line-height: 10px;
     text-align: left;
-    font-size: 20px;
-    text-decoration: none;
-    font-weight:100;
+    font-size: 18px;
+}
+td{
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+
+#tableBody{
 }

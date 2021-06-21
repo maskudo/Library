@@ -12,19 +12,19 @@
             <div class="form-inputs">
                 <div class="form-item">
                     <label for="Title">Title</label>
-                    <input type="text" id="textbox" name="Title">
+                    <input type="text" class="textbox" name="Title">
                 </div>
                 <div class="form-item">
                     <label for="Pages">Pages</label>
-                    <input type="number" id="textbox" name="Pages">
+                    <input type="number" class="textbox" name="Pages">
                 </div>
                 <div class="form-item">
                     <label for="Author">Author</label>
-                    <input type="text" id="textbox" name="Author">
+                    <input type="text" class="textbox" name="Author">
                 </div>
                 <div class="form-item">
-                    <label for="Status">Status</label>
-                    <span>Read? <input type="checkbox" name="Status"></span>
+                    <label for="Read">Read</label>
+                    <input type="checkbox" name="Read" id='checkbox'>
                 </div>
             </div>
             <br>
@@ -40,7 +40,7 @@
                         <th>Pages</th>
                         <th>Author</th>
                         <th>Status</th>
-                        <th>Remove</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
