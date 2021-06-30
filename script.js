@@ -5,32 +5,34 @@ let removeButtons = tableBody.querySelectorAll(".remove")
 let readButtons = tableBody.querySelectorAll(".status")
 let myLibrary = []
 
-function Book(title,pages,author,status){
-    this.title = title
-    this.pages = pages
-    this.author = author
-    if(status){
-        this.read = 'Read'
+class Book{
+    constructor(title,pages,author,status){
+        this.title = title
+        this.pages = pages
+        this.author = author
+        if(status){
+            this.read = 'Read'
+        }
+        else{
+            this.read = 'Unread'
+        }
     }
-    else{
-        this.read = 'Unread'
+    isDuplicate(){
+        for(let i=0;i<myLibrary.length;i++){
+            if(this.title == myLibrary[i].title &&
+                this.author== myLibrary[i].author &&
+                this.pages== myLibrary[i].pages){
+                    return true
+                }
+        }
+        return false
     }
 }
 
 function addToLibrary(book){
     myLibrary.push(book)
 }
-//check for duplicate books
-function isDuplicate(book){
-    for(let i=0;i<myLibrary.length;i++){
-        if(book.title == myLibrary[i].title &&
-            book.author== myLibrary[i].author &&
-            book.pages== myLibrary[i].pages){
-                return true
-            }
-    }
-    return false
-}
+
 //extract book details from the form and push to library
 function processForm(){
     let title = form.elements[0].value
@@ -39,7 +41,7 @@ function processForm(){
     let status = form.elements[3].checked
     if(title!='' && pages!='' && author!=''){
         let newBook = new Book(title,pages,author,status)
-        if(!isDuplicate(newBook)){
+        if(!newBook.isDuplicate()){
             addToLibrary(newBook)
         }
     } 
