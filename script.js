@@ -22,6 +22,7 @@ class Book{
             if(this.title == myLibrary[i].title &&
                 this.author== myLibrary[i].author &&
                 this.pages== myLibrary[i].pages){
+                    console.log("isduplicate")
                     return true
                 }
         }
@@ -70,7 +71,7 @@ function toggleRead(){
         readButton.addEventListener('click',()=>{
             rowId = readButton.classList[1]
             for(let i=0;i<myLibrary.length;i++){
-                if(`${myLibrary[i].title}${myLibrary[i].author}`==rowId){
+                if(`${myLibrary[i].title}${myLibrary[i].author}${myLibrary[i].pages}`==rowId){
                     for(let j=0;j<myLibrary.length;j++){
                         if(myLibrary[i]==myLibrary[j]){
                             if(myLibrary[i].read=='Unread'){
@@ -96,8 +97,8 @@ function displayTable(){
             <td>${book.title}</td>
             <td>${book.pages}</td>
             <td>${book.author}</td>
-            <td><button type='button' class='status ${book.title}${book.author}'>${book.read}</button></td>
-            <td><button type='button' class='remove ${book.title}${book.author}'>Remove</button></td>
+            <td><button type='button' class='status ${book.title}${book.author}${book.pages}'>${book.read}</button></td>
+            <td><button type='button' class='remove ${book.title}${book.author}${book.pages}'>Remove</button></td>
         </tr>
         `
         tableBody.innerHTML += content
